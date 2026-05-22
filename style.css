@@ -8,7 +8,7 @@ body {
     background-color: #121212;
     color: #fff;
     font-family: sans-serif;
-    overflow: hidden; /* Отключаем дефолтные скроллы браузера */
+    overflow: hidden;
 }
 
 #controls {
@@ -34,16 +34,22 @@ body {
     cursor: pointer;
 }
 
-#clearBtn {
+#pixelCount {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#zoomInBtn, #zoomOutBtn, #clearBtn {
     background: #333;
     color: #fff;
     border: none;
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-#clearBtn:hover {
+#zoomInBtn:hover, #zoomOutBtn:hover, #clearBtn:hover {
     background: #444;
 }
 
@@ -60,6 +66,6 @@ body {
 
 canvas {
     position: absolute;
-    background: #ffffff; /* Белый холст по умолчанию */
-    image-rendering: pixelated; /* Чтобы пиксели при приближении не размывались */
+    background: #ffffff;
+    image-rendering: pixelated;
 }
