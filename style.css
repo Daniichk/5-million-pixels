@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden; /* Отключаем дефолтные скроллы браузера */
+}
+
+#controls {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+#colorPicker {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#clearBtn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#clearBtn:hover {
+    background: #444;
+}
+
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    cursor: grab;
+    position: relative;
+}
+
+#canvas-container:active {
+    cursor: grabbing;
+}
+
+canvas {
+    position: absolute;
+    background: #ffffff; /* Белый холст по умолчанию */
+    image-rendering: pixelated; /* Чтобы пиксели при приближении не размывались */
+}
